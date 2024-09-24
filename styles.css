@@ -1,0 +1,184 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+header {
+    background: #002f6c;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: white;
+}
+
+.menu-toggle i {
+    font-size: 24px;
+}
+
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+.home {
+    background: url('bank.jpg') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.home .btn {
+    background: #f39c12;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.about, .services, .gallery, .contact {
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.services .service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.services .card {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.services .card i {
+    font-size: 50px;
+    color: #3498db;
+}
+
+.gallery-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-images img {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+.social a {
+    color: #002f6c;
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+footer {
+    background: #002f6c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: #002f6c;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    nav.active {
+        height: auto; /* Allows the menu to fully expand */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ffffff4d;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .services .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
